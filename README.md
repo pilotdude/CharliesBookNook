@@ -1,3 +1,3 @@
 This is my readme file ;)
 
-Github Doesn't recognize it for some reason :(
+The Amazon Selling Partner API doc can be found here: https://github.com/amzn/selling-partner-api-docs

@@ -1,11 +1,82 @@
+
 <!DOCTYPE html>
+<!-- A Default/skeleton page, can be duplicated as a starting point for any page in the webapp-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>'Receiving'</title>
+    <title>Charlie's Book Nook</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div align="right" include-html="Header.html"></div>
     <h1>Receiving</h1>
+    <h3>Enter a new book</h3>
+
+    <!-- Form to put in the ISBN number-->
+    <div class="Form">
+        <label class="EntryTitle" for="ISBN">ISBN:</label>
+        <input id="ISBN" placeholder="XXX-X-XX-XXXXXX-X" type="text">
+        <input type="submit" value="Lookup Book" class="button">     
+    </div>
+
+    <!-- Form to input the condition and price -->
+    <div class="Form">
+        <div class="EntryGroup">
+            <label class="EntryTitle" for="Condition">Condition:</label>
+            <select id="Condition" name="Condition">
+                <option value="Used - New">Used - New</option>
+                <option value="Used - Like New">Used - Like New</option>
+                <option selected value="Used - Very Good">Used - Very Good</option>
+                <option value="Used - Good">Used - Good</option>
+                <option value="Used - Acceptable">Used - Acceptable</option>
+                <option value="Collectible - Like New">Collectible - Like New</option>
+                <option value="Collectable - Like New">Collectable - Like New</option>
+                <option value="Collectable - Very Good">Collectable - Very Good</option>
+                <option value="Collectable - Good">Collectable - Good</option>
+                <option value="Collectable - Acceptable">Collectable - Acceptable</option>
+            </select>
+            
+        </div>
+        <a class=Refrence href="https://sellercentral.amazon.com/gp/help/help.html?itemID=ZBC9BLXDJVBZPAR&amp;language=en-US" tabindex="-1"> Amazon conditions </a>
+        
+        <div class="EntryGroup">
+            <label class="EntryTitle" for="Price">Price: $</label>
+            <input id="Price" value="10.00" type="number" min=".01" step=".01">
+        </div>
+
+        <div class="EntryGroup">
+            <label class="EntryTitle" for="Shelf">Shelf: </label>
+            <input id="Shelf" placeholder="" type="text">
+        </div>
+
+        <input type="submit" value="Add Book" class="button">
+        
+        
+
+    </div>
+
+    <!-- Information about the book -->
+    <div class="AmazonInfo">
+        <!-- Here the Information of the book needs to be populated-->
+        <div id="CoverArt">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/51S96fD6ORL._SX326_BO1,204,203,200_.jpg">
+        </div>
+        <div id="BookInfo">
+            <h3>Gone With the Wind (text only) by M. Mitchell Hardcover – January 1, 1964</h3>
+            <p class="AuthorName">by: <a href="https://www.amazon.com/Margaret-Mitchell/e/B000APWCGU/ref=dp_byline_cont_book_1">Margaret Mitchell</a></p>
+            <p>Hardcover</p>
+            <p>Amazon Price $26.42</p>
+            <p>51 Used From: $4.10</p> <!-- Ideally we could identify prices based on condition -->
+            
+        </div>
+    </div>
+
+
 
 </body>
+
+<script src="KeyScripts.js"></script>
+<script>
+    includeHTML();
+</script>
 </html>

@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<!-- A Default/skeleton page, can be duplicated as a starting point for any page in the webapp-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Charlie's Book Nook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div align="right" include-html="Header.html"></div>
+    <h1>Pick an Order</h1>
+
+
+    <div class="Form">
+        <div class="EntryGroup">
+            <label class="EntryTitle" for="ISBN">ISBN:</label>
+            <input id="ISBN" placeholder="XXX-X-XX-XXXXXX-X" type="text">
+        </div>
+
+        <div class="EntryGroup">
+            <label class="EntryTitle" for="Condition">Condition:</label>
+            <select id="Condition" name="Condition">
+                <option value="Used - New">Used - New</option>
+                <option value="Used - Like New">Used - Like New</option>
+                <option selected value="Used - Very Good">Used - Very Good</option>
+                <option value="Used - Good">Used - Good</option>
+                <option value="Used - Acceptable">Used - Acceptable</option>
+                <option value="Collectible - Like New">Collectible - Like New</option>
+                <option value="Collectable - Like New">Collectable - Like New</option>
+                <option value="Collectable - Very Good">Collectable - Very Good</option>
+                <option value="Collectable - Good">Collectable - Good</option>
+                <option value="Collectable - Acceptable">Collectable - Acceptable</option>
+            </select>
+        </div>
+        <input type="submit" value="Get Book Location" class="button">
+    </div>
+
+    <h5>Book is on Shelf: </h5> <!-- Need logic to insert shelf number here -->
+</body>
+
+<script src="KeyScripts.js"></script>
+<script>
+    includeHTML();
+</script>
+</html>
