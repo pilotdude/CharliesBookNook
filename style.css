@@ -82,6 +82,9 @@ label.EntryTitle {
   margin-left: 5%;
 }
 
+#ConditionNotes {
+  width: 400px;
+}
 @grey:#2a2a2a;
 @blue:#1fb5bf;
 .log-form {
